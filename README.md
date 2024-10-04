@@ -4,7 +4,7 @@ This is a simple HTML/CSS project that displays a personal profile with informat
 
 ## How to use
 
-1.  Clone the repository: `git clone [<repository-url>](https://github.com/IGORSVOLOHOVS/WebLecture4.git)`
+1.  Clone the repository: `git clone https://github.com/IGORSVOLOHOVS/WebLecture4.git`
 2.  Open `index.html` in your web browser.
 
 ## Customization
