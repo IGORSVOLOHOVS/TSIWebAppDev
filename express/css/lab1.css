@@ -1,0 +1,28 @@
+p {
+  color: black;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 90%;
+}
+
+div {
+  background-color: wheat;
+  border: 1px solid black;
+  padding: 10px;
+  margin: 10px;
+}
+
+img {
+  width: 120%;
+  height: 120%;
+  margin: 10px;
+}
+
+.contact-section {
+  transition: opacity 2s ease-in-out;
+}
+
+.contact-section.visible {
+  opacity: 1;
+}
+
+/*# sourceMappingURL=lab1.css.map */
