@@ -1,34 +1,126 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Profile</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Planets</title>
+  <style>
+        body {
+            background-image: url('space.jpg'); /* Replace with your image path */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed; /* Make background image static */
+            color: white; /* Set text color to white */
+        }
+    .header {
+        display: flex;
+        align-items: center;
+    }
+    .header img {
+        margin-left: 10px;
+        width: 50px; /* Adjust the size as needed */
+        height: auto;
+        animation: rotate 10s linear infinite; /* Add rotation animation */
+    }
+    @keyframes rotate {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+    .planet {
+      width: 200px;
+      margin: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      float: left;
+    }
+    .planet img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+        transition: transform 0.3s ease;
+    }
+    .planet:hover img {
+        transform: scale(1.2);
+    }
+    .description {
+        display: none;
+    }
+    .bsod {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: blue;
+        color: white;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 20px;
+        text-align: center;
+        padding-top: 20%;
+        z-index: 9999;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+        $('.planet').hover(
+            function() {
+                $(this).find('.description').show();
+            },
+            function() {
+                $(this).find('.description').hide();
+            }
+        );
+
+        setTimeout(function() {
+            $('.bsod').show();
+            $('#beep')[0].play();
+        }, 10000); // 10 seconds
+    });
+  </script>
 </head>
 <body>
-    <div class="profile-card">
-        <div class="avatar-container">
-            <img src="img/avatar.png" alt="Avatar" class="avatar"> 
-        </div>
-        <h2 class="name">Igors Volohovs</h2>
-        <div class="info">
-            <p class="nickname"><strong>Nickname:</strong> Igorek</p>
-            <p class="hobby"><strong>Hobby:</strong>Walking</p>
-            <p class="dish"><strong>Favorite Dish:</strong> Sushi</p>
-        </div>
-        <div class="skills">
-            <p><strong>Skills:</strong></p>
-            <ul>
-                <li>JavaScript</li>
-                <li>HavaScript</li>
-                <li>VavaScript</li>
-                <li>SavaScript</li>
-            </ul>
-        </div>
-        <button id="toggle-info">Toggle Info</button>
-        <button id="toggle-skills">Toggle Skills</button>
-    </div>
-    <script src="js/script.js"></script>
+  <div class="header">
+    <h1>Planet Catalog</h1>
+    <img src="sun.png" alt="Sun">
+  </div>
+
+  <div class="planet">
+      <img src="merc.gif" alt="Mercury">
+      <h2>Mercury</h2>
+      <p>The smallest and closest planet to the Sun...</p>
+      <div class="description">Mercury is the smallest planet in the Solar System and the closest to the Sun.</div>
+  </div>
+
+  <div class="planet">
+      <img src="ven.gif" alt="Venus">
+      <h2>Venus</h2>
+      <p>The hottest planet in the Solar System...</p>
+      <div class="description">Venus is the second planet from the Sun and has a thick, toxic atmosphere.</div>
+  </div>
+
+  <div class="planet">
+      <img src="mars.gif" alt="Mars">
+      <h2>Mars</h2>
+      <p>The Red Planet, a possible candidate for colonization...</p>
+      <div class="description">Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System, being larger than only Mercury.</div>
+  </div>
+
+  <div class="bsod">
+    <p>A problem has been detected and Windows has been shut down to prevent damage to your computer.</p>
+    <p>If this is the first time you've seen this Stop error screen, restart your computer. If this screen appears again, follow these steps:</p>
+    <p>Check to make sure any new hardware or software is properly installed. If this is a new installation, ask your hardware or software manufacturer for any Windows updates you might need.</p>
+    <p>If problems continue, disable or remove any newly installed hardware or software. Disable BIOS memory options such as caching or shadowing. If you need to use Safe Mode to remove or disable components, restart your computer, press F8 to select Advanced Startup Options, and then select Safe Mode.</p>
+    <p>Technical information:</p>
+    <p>*** STOP: 0x0000007B (0xFFFFF880009A9928, 0xFFFFFFFFC0000034, 0x0000000000000000, 0x0000000000000000)</p>
+  </div>
+
+  <audio id="beep" src="beep.mp3" loop></audio> <!-- Replace with your beep sound file -->
 </body>
 </html>
