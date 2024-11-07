@@ -1,0 +1,77 @@
+body {
+  font-family: sans-serif; /* Sets the font to sans-serif for the entire document */
+  background-color: #f0f0f0; /* Sets a light gray background color */
+  background-image: url("./transparent.avif"); /* Sets the background image from the file "transparent.avif" */
+  background-size: cover; /* Stretches the background image to cover the entire area */
+  background-repeat: no-repeat; /* Prevents the background image from repeating */
+  background-position: center; /* Centers the background image */
+  background-attachment: fixed; /* Fixes the background image so it doesn't scroll */
+}
+
+.App {
+  text-align: center; /* Centers the text within the element with the "App" class */
+  padding: 20px; /* Adds 20 pixels of padding on all sides within the element with the "App" class */
+}
+
+h1 {
+  color: #333; /* Sets a dark gray color for all first-level headings (h1) */
+}
+
+input[type="text"] {
+  padding: 10px; /* Adds 10 pixels of padding inside text fields */
+  border: 1px solid #ccc; /* Adds a thin gray border around text fields */
+  border-radius: 4px; /* Rounds the corners of text fields */
+  width: 300px; /* Sets the width of text fields to 300 pixels */
+  margin-right: 10px; /* Adds a right margin to text fields */
+}
+
+button {
+  background-color: #4CAF50; /* Sets a green background color for buttons */
+  color: white; /* Sets the text color to white for buttons */
+  padding: 10px 20px; /* Adds padding inside buttons */
+  border: none; /* Removes the border from buttons */
+  border-radius: 4px; /* Rounds the corners of buttons */
+  cursor: pointer; /* Changes the mouse cursor to a pointer when hovering over a button */
+  transition: background-color 0.3s; /* Adds a smooth transition for the button's background color on hover */
+}
+
+button:hover {
+  background-color: #45a049; /* Changes the background color of the button to a darker green on hover */
+}
+
+ul {
+  list-style: none; /* Removes bullet points from unordered lists */
+  padding: 0; /* Removes default padding from unordered lists */
+}
+
+li {
+  background-color: #fff; /* Sets a white background color for list items */
+  padding: 15px; /* Adds padding inside list items */
+  margin-bottom: 10px; /* Adds a bottom margin to list items */
+  border-radius: 4px; /* Rounds the corners of list items */
+  display: flex; /* Enables flexbox layout for list items */
+  align-items: center; /* Vertically aligns items to the center within list items */
+  animation: fadeIn 0.5s ease-in-out; /* Adds a fade-in animation for list items */
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Adds smooth transitions for background color, transform, and box shadow on hover */
+}
+
+li:hover {
+  background-color: #f5f5f5; /* Changes the background color of list items on hover */
+  transform: translateY(-2px); /* Creates a "lift" effect on hover */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds a shadow on hover */
+}
+
+li.completed {
+  text-decoration: line-through; /* Adds a line through completed list items */
+  color: #888; /* Sets a gray color for completed list items */
+  transition: color 0.3s, text-decoration 0.3s; /* Adds smooth transitions for color and text decoration */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* Starts with 0 opacity (invisible) */
+  }
+  to {
+    opacity: 1; /* Ends with 1 opacity (fully visible) */
+  }
+}
