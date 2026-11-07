@@ -1,21 +1,49 @@
-# My Profile
+# tsiweb-app-dev
 
-This is a simple HTML/CSS project that displays a personal profile with information such as name, nickname, photo, hobby, favorite dish, and skills.
+Coursework from a web application development course at TSI, October and
+November 2024. Each exercise sat on a branch of its own; the default branch holds
+the first one, a static profile page.
 
-## How to use
+## What is here
 
-1.  Clone the repository: `git clone https://github.com/IGORSVOLOHOVS/WebLecture4.git`
-2.  Extract and go to `WebLecture4` folder.
-3.  Open `index.html` in your web browser.
+`release` starts from GitHub's default branch, `main`:
 
-## Customization
+- `index.html`, a profile card for Igors Volohovs: a photo, a nickname, a hobby,
+  a favourite dish and a list of four "skills", three of them joke spellings of
+  JavaScript.
+- `css/style.css` styles the card; `img/avatar.png` is the photo.
+- `js/script.js` makes the "Toggle Info" and "Toggle Skills" buttons show and
+  hide their sections.
 
-You can easily customize the profile by modifying the following:
+Open `index.html` in a browser; nothing needs building. The old README told you
+to clone `WebLecture4`, a different repository; this one replaces it.
 
-*   **Avatar:** Replace `avatar.jpg` with your own image in the `index.html` file.
-*   **Profile information:** Update the text content in the `index.html` file to reflect your own name, nickname, hobby, favorite dish, and skills.
-*   **Styling:** Modify the `style.css` file to change the appearance of the profile card.
+## Kept as tags
 
-## Contributing
+The other three branches on GitHub each replace the page with a later exercise.
+Their own commits are kept here as tags, and none of them is built or tested:
 
-Feel free to contribute to this project by submitting pull requests or reporting issues.
+- `import/class1`: a "Planets" page with a space background, a rotating sun and
+  one card per planet with an animated picture, plus `sun.js`, a small Node.js
+  `http` server that serves the folder on port 3000.
+- `import/lab1`: a Node.js Express server (`server.js`, `npm start`) that serves
+  a W3.CSS band template from `express/`, with a Sass stylesheet and a script
+  that logs to the console and alerts when the contact form is submitted. The
+  assignment's `.docx` is committed beside it.
+- `import/lab2`: a Create React App project with a to-do list: add an item,
+  mark it done, delete it. Only the generated `App.test.js` is there as a test.
+
+## Working on it
+
+This repository ships no program. `.\recipe.ps1` is still its whole interface:
+`.\recipe.ps1 test` runs pytest and ruff over `.claude`, and `.\recipe.ps1 info`
+prints the metadata. The other verbs print `nothing to <verb>`. `CLAUDE.md`
+holds the rules.
+
+## License
+
+MIT, as it stood on GitHub. See [LICENSE](LICENSE).
+
+## Lab requirements
+
+This repository complies with [revision 4.0.0](http://127.0.0.1:3000/igors-lab/software-requirements/src/tag/v4.0.0/BEST_REQUIREMENTS.md) of the lab requirements, except R-02 (#7), R-09 (#8), R-37 (#9), R-41 (#10), R-42 (#11).
