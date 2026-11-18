@@ -5,6 +5,23 @@ Reverse-engineered on 2026-11-18 from commit `108fe26` (branch `release`, tag
 asked for. The assignment text is not in the repository. Documentation hub:
 [docs/README.md](docs/README.md).
 
+<!-- jira-sync:start -->
+Jira: KAN-95
+
+## Tasks
+
+This list is one ticket in Jira project KAN, [KAN-95](https://igorsvolohovs.atlassian.net/browse/KAN-95). Each line is a checkbox there: tick it in Jira and the sync ticks it here; add a checkbox there and it is appended here. Done items are the features described in section 3; open items are what the project declares but the code does not do yet.
+
+- [x] Page content (section 3.1) <!-- spec-page-content -->
+- [x] Show and hide (section 3.2) <!-- spec-show-and-hide -->
+- [x] Layout and styling (section 3.3) <!-- spec-layout-and-styling -->
+- [x] Repository interface (section 3.4) <!-- spec-repository-interface -->
+- [ ] Commit `ceab5c2` is titled "pin ruff and pytest", but `.claude/pytest.ini:1-2` (declared, not implemented) <!-- spec-commit-ceab5c2-is-titled-pin-ruff-and-pytest-but-c -->
+- [ ] `.claude/pytest.ini:2` refers to "the scripts this repository carries" and (declared, not implemented) <!-- spec-claude-pytest-ini-2-refers-to-the-scripts-this-rep -->
+- [ ] `README.md:49` lists five lab requirements not met: (declared, not implemented) <!-- spec-readme-md-49-lists-five-lab-requirements-not-met -->
+
+<!-- jira-sync:end -->
+
 ## 1. Purpose and scope
 
 The repository holds a static profile page from a TSI web application
