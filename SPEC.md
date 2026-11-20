@@ -224,3 +224,71 @@ The page uses no JavaScript or CSS library. There are no lock files.
   the `release` branch, not the page. `.gitea/workflows/release.yaml:45-54`
   reads it and publishes a release tagged `v<Version>` unless that tag
   already exists (`.gitea/workflows/release.yaml:292`).
+
+## Screenshots of requirements
+
+### FR-1 - One HTML page titled "My Profile" with stylesheet and script
+
+![FR-1](docs/screenshots/FR-1.png)
+
+*Captured 2026-11-20: `node shots/shot.js view-source:<file:/// URL of index.html> FR-1.png --width 900 --height 640`, Chrome's source view of the real `index.html`: `lang="en"`, the title "My Profile", the stylesheet link and the script tag at the end of `body`.*
+
+### FR-2 - Avatar image and name heading inside the profile card
+
+![FR-2](docs/screenshots/FR-9.png)
+
+*Captured 2026-11-20: the same screen as FR-9 (FR-9.png), `index.html` at load with no clicks; the round avatar image and the "Igors Volohovs" heading at the top of the card.*
+
+### FR-3 - Info block with three labelled paragraphs
+
+![FR-3](docs/screenshots/FR-9.png)
+
+*Captured 2026-11-20: the same screen as FR-9 (FR-9.png), `index.html` at load with no clicks; the three labelled lines Nickname, Hobby and Favorite Dish under the name.*
+
+### FR-4 - Skills block with a label and a list of four items
+
+![FR-4](docs/screenshots/FR-9.png)
+
+*Captured 2026-11-20: the same screen as FR-9 (FR-9.png), `index.html` at load with no clicks; the "Skills:" label and the list of four items.*
+
+### FR-5 - Two buttons, Toggle Info and Toggle Skills
+
+![FR-5](docs/screenshots/FR-9.png)
+
+*Captured 2026-11-20: the same screen as FR-9 (FR-9.png), `index.html` at load with no clicks; the Toggle Info and Toggle Skills buttons at the bottom of the card.*
+
+### FR-6 - Button handlers attached after DOMContentLoaded
+
+![FR-6](docs/screenshots/FR-6.png)
+
+*Captured 2026-11-20: `node shots/shot.js view-source:<file:/// URL of js/script.js> FR-6.png --width 900 --height 480`, Chrome's source view of the real `js/script.js`: line 1 registers the `DOMContentLoaded` listener and both click handlers are attached inside it. The timing itself has no visible state of its own.*
+
+### FR-7 - Toggle Info shows and hides the info block
+
+![FR-7](docs/screenshots/FR-7.png)
+
+*Captured 2026-11-20: `index.html` opened as a `file:///` URL in headless Chrome (`node shots/shot.js <url> FR-7.png --width 640 --height 760 --wait 4000 --setup <js>`); the setup clicked **Toggle Info** twice. The first click set `display: block`, which changes nothing visible, and the second set `display: none`, so the info block is gone.*
+
+### FR-8 - Toggle Skills shows and hides the skills block
+
+![FR-8](docs/screenshots/FR-8.png)
+
+*Captured 2026-11-20: `index.html` opened as a `file:///` URL in headless Chrome (`node shots/shot.js <url> FR-8.png --width 640 --height 760 --wait 4000 --setup <js>`); the setup clicked **Toggle Skills** twice. The first click changed nothing visible and the second hid the skills block.*
+
+### FR-9 - Card centred on a full-height flex body, #f4f4f4, sans-serif
+
+![FR-9](docs/screenshots/FR-9.png)
+
+*Captured 2026-11-20: `index.html` opened as a `file:///` URL in headless Chrome at 1280x800 (`node shots/shot.js <url> FR-9.png --width 1280 --height 800 --setup <js>`); the setup only waited for `img/avatar.png` to load. No clicks. The same screen serves FR-10. The file is stored without palette compression, which would merge the white card (#fff) into the #f4f4f4 background.*
+
+### FR-10 - Card and avatar styling
+
+![FR-10](docs/screenshots/FR-9.png)
+
+*Captured 2026-11-20: the same screen as FR-9 (FR-9.png): the white card with rounded corners and shadow, the round 150x150 avatar and the centred text.*
+
+### FR-11 - Lab tooling: recipe.ps1 verbs
+
+![FR-11](docs/screenshots/FR-11.png)
+
+*Captured 2026-11-20: `powershell -NoProfile -ExecutionPolicy Bypass -File fr11.ps1`, a helper script in `%TEMP%` that runs every `recipe.ps1` verb in a throwaway clone of the repository, with pytest and ruff 0.16.1 from a throwaway venv, and lists the cache folders before and after `clean`. Terminal output of a real run.*
